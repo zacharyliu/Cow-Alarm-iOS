@@ -1,25 +1,137 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bld-u6-Z1n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="AKC-46-8Ws">
+            <objects>
+                <navigationController id="bld-u6-Z1n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bKp-ho-bfu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dnl-xb-cFd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qxn-9q-df9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181" y="337"/>
+        </scene>
+        <!--Invisible Cow Alarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cow_Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="ClG-g1-q93"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZx-wn-02e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uir-6L-9nR">
+                                <rect key="frame" x="53" y="227" width="214" height="113"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="Y1X-I9-Jr7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Dismiss Alarm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNr-i4-bYm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyf-hq-uo3">
+                                <rect key="frame" x="16" y="83" width="209" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hS9-a3-gCa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NvH-l1-bCR" kind="push" id="cSh-QM-3Xs"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-xh-i6c">
+                                <rect key="frame" x="255" y="82" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uir-6L-9nR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="GpZ-cf-4un"/>
+                            <constraint firstItem="lXe-xh-i6c" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JTs-aM-hu3"/>
+                            <constraint firstItem="lXe-xh-i6c" firstAttribute="top" secondItem="ClG-g1-q93" secondAttribute="bottom" constant="18" id="RRX-KW-e1M"/>
+                            <constraint firstItem="lXe-xh-i6c" firstAttribute="leading" secondItem="tyf-hq-uo3" secondAttribute="trailing" constant="30" id="TvY-oJ-Lv8"/>
+                            <constraint firstItem="UZx-wn-02e" firstAttribute="top" secondItem="Uir-6L-9nR" secondAttribute="bottom" constant="228" id="Uhn-ve-Gw4"/>
+                            <constraint firstItem="Uir-6L-9nR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YHy-WC-43Q"/>
+                            <constraint firstItem="tyf-hq-uo3" firstAttribute="bottom" secondItem="lXe-xh-i6c" secondAttribute="bottom" id="f3Y-aU-ld2"/>
+                            <constraint firstItem="tyf-hq-uo3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gp5-c8-F3o"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Invisible Cow Alarm" id="AA9-fF-HKP"/>
+                    <connections>
+                        <outlet property="alarmTimeLabel" destination="tyf-hq-uo3" id="XTx-Fv-Owm"/>
+                        <outlet property="dismissButton" destination="Uir-6L-9nR" id="XpF-lp-mgQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="234" y="337"/>
+        </scene>
+        <!--Edit Alarm-->
+        <scene sceneID="Yt4-D1-iLy">
+            <objects>
+                <viewController id="NvH-l1-bCR" customClass="EditViewController" customModule="Cow_Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gW1-JA-eZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="P5Z-8m-LTB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5OE-mc-bCR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SAJ-ih-XUG">
+                                <rect key="frame" x="0.0" y="203" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="460882036.16597098">
+                                    <!--2015-08-10 06:47:16 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="SAJ-ih-XUG" secondAttribute="centerY" id="qLO-r9-m98"/>
+                            <constraint firstItem="SAJ-ih-XUG" firstAttribute="leading" secondItem="5OE-mc-bCR" secondAttribute="leading" id="t3X-od-GNj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Alarm" id="gXI-EG-mF4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1UR-D4-E0l">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="NvH-l1-bCR" id="dck-xD-tTM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="SAJ-ih-XUG" id="Rd8-YP-0di"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vc-Nu-Wq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="337"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
