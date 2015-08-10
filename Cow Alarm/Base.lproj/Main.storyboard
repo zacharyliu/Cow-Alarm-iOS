@@ -33,7 +33,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uir-6L-9nR">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-xh-i6c">
+                                <rect key="frame" x="255" y="82" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uir-6L-9nR">
                                 <rect key="frame" x="53" y="227" width="214" height="113"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -62,25 +65,30 @@
                                     <segue destination="NvH-l1-bCR" kind="push" id="cSh-QM-3Xs"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-xh-i6c">
-                                <rect key="frame" x="255" y="82" width="51" height="31"/>
-                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCg-eY-5Fd">
+                                <rect key="frame" x="-6" y="170" width="332" height="228"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zCg-eY-5Fd" secondAttribute="trailing" constant="-22" id="BtV-sn-2iV"/>
                             <constraint firstItem="Uir-6L-9nR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="GpZ-cf-4un"/>
                             <constraint firstItem="lXe-xh-i6c" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JTs-aM-hu3"/>
                             <constraint firstItem="lXe-xh-i6c" firstAttribute="top" secondItem="ClG-g1-q93" secondAttribute="bottom" constant="18" id="RRX-KW-e1M"/>
                             <constraint firstItem="lXe-xh-i6c" firstAttribute="leading" secondItem="tyf-hq-uo3" secondAttribute="trailing" constant="30" id="TvY-oJ-Lv8"/>
                             <constraint firstItem="UZx-wn-02e" firstAttribute="top" secondItem="Uir-6L-9nR" secondAttribute="bottom" constant="228" id="Uhn-ve-Gw4"/>
                             <constraint firstItem="Uir-6L-9nR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YHy-WC-43Q"/>
+                            <constraint firstItem="zCg-eY-5Fd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-6" id="cvZ-bs-IZ0"/>
                             <constraint firstItem="tyf-hq-uo3" firstAttribute="bottom" secondItem="lXe-xh-i6c" secondAttribute="bottom" id="f3Y-aU-ld2"/>
+                            <constraint firstItem="zCg-eY-5Fd" firstAttribute="top" secondItem="Uir-6L-9nR" secondAttribute="bottom" constant="-170" id="fF4-44-pTV"/>
                             <constraint firstItem="tyf-hq-uo3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gp5-c8-F3o"/>
+                            <constraint firstItem="zCg-eY-5Fd" firstAttribute="bottom" secondItem="UZx-wn-02e" secondAttribute="top" constant="-170" id="kdY-H6-HMQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Invisible Cow Alarm" id="AA9-fF-HKP"/>
                     <connections>
                         <outlet property="alarmTimeLabel" destination="tyf-hq-uo3" id="XTx-Fv-Owm"/>
+                        <outlet property="cowImage" destination="zCg-eY-5Fd" id="H45-5s-Czs"/>
                         <outlet property="dismissButton" destination="Uir-6L-9nR" id="XpF-lp-mgQ"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var dismissButton: UIButton!
     @IBOutlet var alarmTimeLabel: UIButton!
+    @IBOutlet var cowImage: UIImageView!
 
     @IBAction func buttonPressed(sender: AnyObject) {
         dismissButton.hidden = true
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dismissButton.hidden = true
         
         // Set default time
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -74,6 +77,24 @@ class ViewController: UIViewController {
         playFile("win")
     }
     
+    func showCow() {
+        dispatch_async(dispatch_get_main_queue(), {
+            var images = NSMutableArray()
+            images.addObject(UIImage(named: "cow-1.png")!)
+            images.addObject(UIImage(named: "cow-2.png")!)
+            self.cowImage.animationImages = images as [AnyObject]
+            self.cowImage.animationDuration = 2
+            self.cowImage.animationRepeatCount = 1
+            self.cowImage.startAnimating()
+            
+            
+            self.cowImage.transform = CGAffineTransformMakeScale(0.1, 0.1)
+            UIView.animateWithDuration(1, animations: {
+                self.cowImage.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            })
+        })
+    }
+    
     func playFile(name: NSString) {
         let mainBundle = NSBundle.mainBundle()
         let filePath = mainBundle.pathForResource(name as String, ofType: "mp3")
@@ -108,6 +129,9 @@ class ViewController: UIViewController {
             if (self.player != nil) {
                 self.player!.stop()
             }
+            
+            
+            self.showCow()
             
             NSThread.sleepForTimeInterval(1.2)
             self.playMoo()

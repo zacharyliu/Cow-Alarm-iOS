@@ -27,6 +27,8 @@
 		B6A86AC51B78752500DC65A7 /* 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6A86AB81B78752500DC65A7 /* 11.mp3 */; };
 		B6A86AC61B78752500DC65A7 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6A86AB91B78752500DC65A7 /* win.mp3 */; };
 		B6A86AC81B787F6700DC65A7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A86AC71B787F6700DC65A7 /* EditViewController.swift */; };
+		B6A86ACB1B788F3E00DC65A7 /* cow-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A86AC91B788F3E00DC65A7 /* cow-1.png */; };
+		B6A86ACC1B788F3E00DC65A7 /* cow-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A86ACA1B788F3E00DC65A7 /* cow-2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		B6A86AB81B78752500DC65A7 /* 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11.mp3; sourceTree = "<group>"; };
 		B6A86AB91B78752500DC65A7 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		B6A86AC71B787F6700DC65A7 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		B6A86AC91B788F3E00DC65A7 /* cow-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cow-1.png"; sourceTree = "<group>"; };
+		B6A86ACA1B788F3E00DC65A7 /* cow-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cow-2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		B6A86AAC1B78751A00DC65A7 /* cow */ = {
 			isa = PBXGroup;
 			children = (
+				B6A86AC91B788F3E00DC65A7 /* cow-1.png */,
+				B6A86ACA1B788F3E00DC65A7 /* cow-2.png */,
 				B6A86AAD1B78752500DC65A7 /* 0.mp3 */,
 				B6A86AAE1B78752500DC65A7 /* 1.mp3 */,
 				B6A86AAF1B78752500DC65A7 /* 2.mp3 */,
@@ -243,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A86ACC1B788F3E00DC65A7 /* cow-2.png in Resources */,
 				B6A86AC11B78752500DC65A7 /* 7.mp3 in Resources */,
 				B6A86A921B78705600DC65A7 /* Main.storyboard in Resources */,
 				B6A86ABD1B78752500DC65A7 /* 3.mp3 in Resources */,
@@ -255,6 +262,7 @@
 				B6A86AC31B78752500DC65A7 /* 9.mp3 in Resources */,
 				B6A86ABA1B78752500DC65A7 /* 0.mp3 in Resources */,
 				B6A86AC51B78752500DC65A7 /* 11.mp3 in Resources */,
+				B6A86ACB1B788F3E00DC65A7 /* cow-1.png in Resources */,
 				B6A86ABF1B78752500DC65A7 /* 5.mp3 in Resources */,
 				B6A86ABB1B78752500DC65A7 /* 1.mp3 in Resources */,
 				B6A86ABE1B78752500DC65A7 /* 4.mp3 in Resources */,
